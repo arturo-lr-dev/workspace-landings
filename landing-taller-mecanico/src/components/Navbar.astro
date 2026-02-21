@@ -40,17 +40,17 @@ const links = [
       </button>
     </div>
   </div>
-
-  <!-- Mobile menu -->
-  <div id="mobile-menu" class="mobile-menu">
-    <div class="mobile-menu-inner">
-      {links.map((link, i) => (
-        <a href={link.href} class="mobile-link" style={`transition-delay: ${i * 80}ms`}>{link.label}</a>
-      ))}
-      <a href="#contacto" class="mobile-cta">Agendar Cita</a>
-    </div>
-  </div>
 </nav>
+
+<!-- Mobile menu - fuera del nav para evitar que backdrop-filter rompa el position:fixed -->
+<div id="mobile-menu" class="mobile-menu">
+  <div class="mobile-menu-inner">
+    {links.map((link, i) => (
+      <a href={link.href} class="mobile-link" style={`transition-delay: ${i * 80}ms`}>{link.label}</a>
+    ))}
+    <a href="#contacto" class="mobile-cta">Agendar Cita</a>
+  </div>
+</div>
 
 <style is:global>
   .navbar {
@@ -60,7 +60,7 @@ const links = [
     right: 0;
     z-index: 50;
     background: transparent;
-    transition: all 0.5s;
+    transition: background 0.5s, box-shadow 0.5s;
   }
   .navbar.scrolled {
     background: rgba(10, 31, 10, 0.95);
@@ -73,7 +73,7 @@ const links = [
     align-items: center;
     justify-content: space-between;
     height: 5rem;
-    transition: all 0.5s;
+    transition: height 0.5s;
   }
   .navbar.scrolled .nav-inner { height: 4rem; }
 
@@ -146,13 +146,14 @@ const links = [
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 6px;
+    gap: 5px;
     width: 2.5rem;
     height: 2.5rem;
     color: white;
     background: none;
     border: none;
     cursor: pointer;
+    position: relative;
   }
   @media (min-width: 1024px) { .menu-btn { display: none; } }
   .menu-line {
@@ -163,19 +164,22 @@ const links = [
     transition: all 0.3s;
     transform-origin: center;
   }
-  .menu-line--short { width: 1rem; margin-left: auto; }
+  .menu-line--short { width: 1rem; }
 
-  .menu-btn.active .menu-line:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  /* X animation: gap=5px, line=2px → offset = 5+2 = 7px */
+  .menu-btn.active .menu-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .menu-btn.active .menu-line:nth-child(2) { opacity: 0; }
-  .menu-btn.active .menu-line:nth-child(3) { width: 1.5rem; transform: translateY(-8px) rotate(-45deg); }
+  .menu-btn.active .menu-line:nth-child(3) { width: 1.5rem; transform: translateY(-7px) rotate(-45deg); }
 
-  /* Mobile menu */
+  /* Mobile menu - ahora fuera del nav, usa z-index propio alto */
   .mobile-menu {
     display: none;
     position: fixed;
-    inset: 0;
     top: 5rem;
-    z-index: 40;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 45;
     background: rgba(10,31,10,0.98);
     backdrop-filter: blur(20px);
     transform: translateX(-100%);
@@ -183,7 +187,7 @@ const links = [
   }
   @media (max-width: 1023px) { .mobile-menu { display: block; } }
   .mobile-menu.open { transform: translateX(0); }
-  .navbar.scrolled .mobile-menu { top: 4rem; }
+  .mobile-menu.scrolled { top: 4rem; }
 
   .mobile-menu-inner {
     display: flex;
@@ -224,12 +228,14 @@ const links = [
   const mobileMenu = document.getElementById("mobile-menu");
   const mobileLinks = document.querySelectorAll(".mobile-link");
 
-  // Scroll effect
+  // Scroll effect - sync navbar + mobile menu
   window.addEventListener("scroll", () => {
     if (window.scrollY > 60) {
       navbar?.classList.add("scrolled");
+      mobileMenu?.classList.add("scrolled");
     } else {
       navbar?.classList.remove("scrolled");
+      mobileMenu?.classList.remove("scrolled");
     }
   });
 
