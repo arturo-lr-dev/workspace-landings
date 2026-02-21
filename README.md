@@ -5,7 +5,7 @@ Workspace para crear y gestionar landing pages con Astro + Tailwind + GSAP.
 ## Stack Preferido
 
 - **Framework:** Astro (para landings estáticas - HTML puro, ultra-rápido)
-- **Styling:** Tailwind CSS
+- **Styling:** Vainilla CSS
 - **Animations:** GSAP (GreenSock)
 - **Deployment:** Vercel / Netlify / Cloudflare Pages
 
