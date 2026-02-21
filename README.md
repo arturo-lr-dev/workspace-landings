@@ -31,9 +31,24 @@ workspace-landings/
 4. Build con `npm run build`
 5. Deploy a hosting estático
 
+## Skills Disponibles
+
+Este workspace incluye skills de Claude para mejorar el desarrollo:
+
+### frontend-design
+Crea interfaces frontend distintivas y de alta calidad que evitan estéticas genéricas.
+
+**Uso:**
+```
+Usando la skill frontend-design, crea una landing para [negocio] con tonos [colores].
+```
+
+Ver documentación completa en [`skills/README.md`](./skills/README.md)
+
 ## Notas
 
 - Siempre usar Astro para landings (no Next.js)
 - Tailwind CSS v4 con `@import "tailwindcss"`
 - GSAP para animaciones profesionales
 - Imágenes optimizadas localmente en `public/images/`
+- Usar skill `frontend-design` para diseños distintivos
