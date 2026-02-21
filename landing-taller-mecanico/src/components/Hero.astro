@@ -1,0 +1,179 @@
+---
+---
+
+<section id="hero" class="relative min-h-screen flex items-center overflow-hidden bg-verde-950">
+  <!-- Background layers -->
+  <div class="absolute inset-0">
+    <!-- Gradient mesh -->
+    <div class="absolute inset-0 bg-gradient-to-br from-verde-950 via-verde-900 to-verde-950"></div>
+
+    <!-- Radial glow -->
+    <div class="absolute top-1/3 right-1/4 w-[800px] h-[800px] bg-verde-600/15 rounded-full blur-[150px]"></div>
+    <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-acento/5 rounded-full blur-[120px]"></div>
+
+    <!-- Grid pattern -->
+    <div class="absolute inset-0 opacity-[0.04]" style="background-image: linear-gradient(rgba(200,255,0,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(200,255,0,0.3) 1px, transparent 1px); background-size: 60px 60px;"></div>
+
+    <!-- Decorative gear shapes -->
+    <div class="absolute -top-20 -right-20 w-80 h-80 opacity-[0.06]">
+      <svg class="w-full h-full animate-gear" viewBox="0 0 200 200" fill="currentColor" color="#c8ff00">
+        <path d="M100 20 L108 40 L120 25 L122 48 L138 38 L134 60 L152 55 L142 75 L160 76 L145 92 L162 98 L145 108 L158 120 L138 122 L146 140 L126 134 L128 152 L110 142 L106 160 L96 144 L86 158 L82 140 L66 148 L70 130 L52 132 L62 114 L44 110 L58 98 L42 88 L58 80 L46 66 L64 64 L56 48 L74 52 L72 34 L88 44 L92 26Z"/>
+        <circle cx="100" cy="100" r="30" fill="rgba(10,31,10,1)"/>
+      </svg>
+    </div>
+    <div class="absolute bottom-10 left-10 w-52 h-52 opacity-[0.04]">
+      <svg class="w-full h-full animate-gear-reverse" viewBox="0 0 200 200" fill="currentColor" color="#38a338">
+        <path d="M100 20 L108 40 L120 25 L122 48 L138 38 L134 60 L152 55 L142 75 L160 76 L145 92 L162 98 L145 108 L158 120 L138 122 L146 140 L126 134 L128 152 L110 142 L106 160 L96 144 L86 158 L82 140 L66 148 L70 130 L52 132 L62 114 L44 110 L58 98 L42 88 L58 80 L46 66 L64 64 L56 48 L74 52 L72 34 L88 44 L92 26Z"/>
+        <circle cx="100" cy="100" r="30" fill="rgba(10,31,10,1)"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-28 pb-20 w-full">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <!-- Left column -->
+      <div>
+        <!-- Badge -->
+        <div class="reveal inline-flex items-center gap-2 px-4 py-1.5 border border-verde-600/40 rounded-full mb-8">
+          <span class="w-2 h-2 bg-acento rounded-full animate-pulse"></span>
+          <span class="text-xs font-mono uppercase tracking-widest text-verde-300">+20 años de experiencia</span>
+        </div>
+
+        <!-- Heading -->
+        <h1 class="reveal delay-1 font-display font-bold uppercase leading-[0.9] tracking-tight">
+          <span class="block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-white">Tu auto</span>
+          <span class="block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-gradient-green mt-1">merece</span>
+          <span class="block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-white mt-1">lo mejor</span>
+        </h1>
+
+        <!-- Description -->
+        <p class="reveal delay-2 mt-8 text-lg text-white/60 max-w-lg leading-relaxed">
+          Servicio automotriz profesional con tecnología de punta y técnicos certificados.
+          Diagnóstico preciso, reparación garantizada.
+        </p>
+
+        <!-- CTA buttons -->
+        <div class="reveal delay-3 flex flex-wrap gap-4 mt-10">
+          <a href="#contacto" class="group relative px-8 py-4 bg-acento text-verde-950 font-display font-bold uppercase tracking-wider text-sm overflow-hidden">
+            <span class="relative z-10">Agendar Cita</span>
+            <div class="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+          </a>
+          <a href="#servicios" class="group px-8 py-4 border border-verde-500/40 text-white font-display font-medium uppercase tracking-wider text-sm hover:border-acento hover:text-acento transition-all duration-300">
+            Ver Servicios
+          </a>
+        </div>
+
+        <!-- Stats row -->
+        <div class="reveal delay-4 flex gap-10 mt-14 pt-8 border-t border-white/10">
+          <div>
+            <span class="block text-3xl lg:text-4xl font-display font-bold text-acento">20+</span>
+            <span class="block text-xs font-mono uppercase tracking-widest text-white/40 mt-1">Años</span>
+          </div>
+          <div>
+            <span class="block text-3xl lg:text-4xl font-display font-bold text-white">5K+</span>
+            <span class="block text-xs font-mono uppercase tracking-widest text-white/40 mt-1">Clientes</span>
+          </div>
+          <div>
+            <span class="block text-3xl lg:text-4xl font-display font-bold text-white">100%</span>
+            <span class="block text-xs font-mono uppercase tracking-widest text-white/40 mt-1">Garantía</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right column - Visual element -->
+      <div class="reveal-right delay-3 relative hidden lg:block">
+        <div class="relative">
+          <!-- Main visual card -->
+          <div class="relative bg-gradient-to-br from-verde-800/50 to-verde-900/80 border border-verde-600/20 rounded-sm p-8 backdrop-blur-sm">
+            <!-- Terminal-style header -->
+            <div class="flex items-center gap-2 mb-6 pb-4 border-b border-verde-600/20">
+              <div class="w-3 h-3 rounded-full bg-verde-500"></div>
+              <div class="w-3 h-3 rounded-full bg-acento"></div>
+              <div class="w-3 h-3 rounded-full bg-verde-300"></div>
+              <span class="ml-3 text-xs font-mono text-verde-400">diagnostico_v4.2</span>
+            </div>
+
+            <!-- Diagnostic display -->
+            <div class="space-y-4 font-mono text-sm">
+              <div class="flex justify-between items-center">
+                <span class="text-verde-400">Motor</span>
+                <div class="flex items-center gap-2">
+                  <div class="w-32 h-2 bg-verde-900 rounded-full overflow-hidden">
+                    <div class="w-[92%] h-full bg-gradient-to-r from-verde-500 to-acento rounded-full"></div>
+                  </div>
+                  <span class="text-acento text-xs">92%</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-verde-400">Frenos</span>
+                <div class="flex items-center gap-2">
+                  <div class="w-32 h-2 bg-verde-900 rounded-full overflow-hidden">
+                    <div class="w-[78%] h-full bg-gradient-to-r from-verde-500 to-verde-300 rounded-full"></div>
+                  </div>
+                  <span class="text-verde-300 text-xs">78%</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-verde-400">Suspensión</span>
+                <div class="flex items-center gap-2">
+                  <div class="w-32 h-2 bg-verde-900 rounded-full overflow-hidden">
+                    <div class="w-[85%] h-full bg-gradient-to-r from-verde-500 to-acento rounded-full"></div>
+                  </div>
+                  <span class="text-acento text-xs">85%</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-verde-400">Eléctrico</span>
+                <div class="flex items-center gap-2">
+                  <div class="w-32 h-2 bg-verde-900 rounded-full overflow-hidden">
+                    <div class="w-[96%] h-full bg-gradient-to-r from-verde-500 to-acento rounded-full"></div>
+                  </div>
+                  <span class="text-acento text-xs">96%</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-verde-400">Transmisión</span>
+                <div class="flex items-center gap-2">
+                  <div class="w-32 h-2 bg-verde-900 rounded-full overflow-hidden">
+                    <div class="w-[88%] h-full bg-gradient-to-r from-verde-500 to-acento rounded-full"></div>
+                  </div>
+                  <span class="text-acento text-xs">88%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Status -->
+            <div class="mt-6 pt-4 border-t border-verde-600/20 flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 bg-acento rounded-full animate-pulse"></span>
+                <span class="text-xs font-mono text-verde-300">ESTADO: ÓPTIMO</span>
+              </div>
+              <span class="text-xs font-mono text-verde-500">ID: #VH-4892</span>
+            </div>
+          </div>
+
+          <!-- Floating accent card -->
+          <div class="absolute -bottom-6 -left-6 bg-acento text-verde-950 px-5 py-3 rounded-sm shadow-2xl">
+            <div class="flex items-center gap-3">
+              <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12l2 2 4-4" />
+                <circle cx="12" cy="12" r="10" />
+              </svg>
+              <div>
+                <span class="block text-sm font-display font-bold uppercase">Diagnóstico</span>
+                <span class="block text-xs font-mono">Gratuito</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 reveal delay-5">
+    <span class="text-[10px] font-mono uppercase tracking-[0.3em] text-verde-500">Scroll</span>
+    <div class="w-px h-8 bg-gradient-to-b from-verde-500 to-transparent animate-pulse"></div>
+  </div>
+</section>

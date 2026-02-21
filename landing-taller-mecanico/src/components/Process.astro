@@ -1,0 +1,78 @@
+---
+const steps = [
+  {
+    num: "01",
+    title: "Contacto",
+    desc: "Agenda tu cita por teléfono, WhatsApp o a través de nuestro formulario. Cuéntanos qué necesita tu vehículo.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-6 h-6"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>`,
+  },
+  {
+    num: "02",
+    title: "Diagnóstico",
+    desc: "Realizamos un diagnóstico completo con escáner computarizado para identificar cada detalle. Gratis.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-6 h-6"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>`,
+  },
+  {
+    num: "03",
+    title: "Presupuesto",
+    desc: "Te entregamos un presupuesto detallado, claro y sin sorpresas. Tú decides si procedemos.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-6 h-6"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 15h6M9 11h6"/></svg>`,
+  },
+  {
+    num: "04",
+    title: "Reparación",
+    desc: "Nuestros técnicos certificados realizan el trabajo con piezas de calidad y te mantenemos informado en todo momento.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-6 h-6"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>`,
+  },
+  {
+    num: "05",
+    title: "Entrega",
+    desc: "Tu vehículo listo, funcionando perfecto y con garantía escrita. Te explicamos todo el trabajo realizado.",
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-6 h-6"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>`,
+  },
+];
+---
+
+<section id="proceso" class="relative py-24 lg:py-32 bg-white overflow-hidden">
+  <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-verde-300/40 to-transparent"></div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center max-w-2xl mx-auto mb-16 lg:mb-20">
+      <span class="reveal inline-block font-mono text-xs uppercase tracking-[0.3em] text-verde-600 mb-4">
+        // Cómo trabajamos
+      </span>
+      <h2 class="reveal delay-1 font-display text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-verde-950 leading-[0.95]">
+        Proceso <span class="text-verde-600">simple</span>,<br/>resultados perfectos
+      </h2>
+    </div>
+
+    <!-- Steps -->
+    <div class="relative">
+      <!-- Connector line (desktop) -->
+      <div class="hidden lg:block absolute top-14 left-[10%] right-[10%] h-px bg-gradient-to-r from-verde-200 via-verde-400 to-verde-200"></div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-4">
+        {steps.map((step, i) => (
+          <div class={`reveal delay-${i + 1} relative text-center group`}>
+            <!-- Step circle -->
+            <div class="relative mx-auto w-28 h-28 rounded-full bg-verde-50 border-2 border-verde-200 flex flex-col items-center justify-center group-hover:bg-verde-600 group-hover:border-verde-600 transition-all duration-500">
+              <div class="text-verde-600 group-hover:text-white transition-colors duration-300">
+                <Fragment set:html={step.icon} />
+              </div>
+              <span class="mt-1 text-[10px] font-mono font-bold text-verde-400 group-hover:text-verde-200 transition-colors">{step.num}</span>
+            </div>
+
+            <!-- Content -->
+            <h3 class="mt-5 font-display text-base font-bold uppercase tracking-wide text-verde-950">
+              {step.title}
+            </h3>
+            <p class="mt-2 text-sm text-acero/60 leading-relaxed max-w-[220px] mx-auto">
+              {step.desc}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

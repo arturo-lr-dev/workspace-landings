@@ -1,0 +1,65 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import About from '../components/About.astro';
+import Process from '../components/Process.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="AutoTech | Taller Mecánico Profesional">
+  <Navbar />
+  <Hero />
+  <Services />
+  <About />
+  <Process />
+  <Testimonials />
+  <Contact />
+  <Footer />
+</Layout>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>
+
+<script>
+  // Scroll reveal observer
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px',
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach((el) => {
+    observer.observe(el);
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', (e) => {
+      e.preventDefault();
+      const href = anchor.getAttribute('href');
+      if (!href || href === '#') return;
+      const target = document.querySelector(href);
+      if (target) {
+        const navHeight = 80;
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY - navHeight;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth',
+        });
+      }
+    });
+  });
+</script>
