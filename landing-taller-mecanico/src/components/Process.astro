@@ -42,7 +42,7 @@ const steps = [
       <span class="reveal inline-block font-mono text-xs uppercase tracking-[0.3em] text-verde-600 mb-4">
         // Cómo trabajamos
       </span>
-      <h2 class="reveal delay-1 font-display text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-verde-950 leading-[0.95]">
+      <h2 class="reveal anim-delay-1 font-display text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-verde-950 leading-[0.95]">
         Proceso <span class="text-verde-600">simple</span>,<br/>resultados perfectos
       </h2>
     </div>
@@ -54,7 +54,7 @@ const steps = [
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-4">
         {steps.map((step, i) => (
-          <div class={`reveal delay-${i + 1} relative text-center group`}>
+          <div class={`reveal anim-delay-${i + 1} relative text-center group`}>
             <!-- Step circle -->
             <div class="relative mx-auto w-28 h-28 rounded-full bg-verde-50 border-2 border-verde-200 flex flex-col items-center justify-center group-hover:bg-verde-600 group-hover:border-verde-600 transition-all duration-500">
               <div class="text-verde-600 group-hover:text-white transition-colors duration-300">

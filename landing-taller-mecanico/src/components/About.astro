@@ -22,17 +22,17 @@ const features = [
         <span class="reveal inline-block font-mono text-xs uppercase tracking-[0.3em] text-verde-400 mb-4">
           // Sobre nosotros
         </span>
-        <h2 class="reveal delay-1 font-display text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-white leading-[0.95]">
+        <h2 class="reveal anim-delay-1 font-display text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-white leading-[0.95]">
           Más que un<br/>
           <span class="text-gradient-green">taller</span>,<br/>
           tu aliado
         </h2>
-        <p class="reveal delay-2 mt-8 text-lg text-white/50 leading-relaxed max-w-md">
+        <p class="reveal anim-delay-2 mt-8 text-lg text-white/50 leading-relaxed max-w-md">
           Con más de dos décadas de experiencia, combinamos la pasión por la mecánica automotriz con la tecnología más avanzada del mercado.
         </p>
 
         <!-- Big number accent -->
-        <div class="reveal delay-3 mt-12 flex items-end gap-4">
+        <div class="reveal anim-delay-3 mt-12 flex items-end gap-4">
           <span class="text-8xl lg:text-9xl font-display font-bold text-acento leading-none">20</span>
           <div class="mb-3">
             <span class="block text-xl font-display font-bold uppercase text-white">Años de</span>
@@ -44,7 +44,7 @@ const features = [
       <!-- Right column - Features -->
       <div class="space-y-0">
         {features.map((feat, i) => (
-          <div class={`reveal delay-${i + 2} group flex gap-6 py-7 border-b border-white/10 first:border-t hover:border-verde-500/30 transition-colors cursor-default`}>
+          <div class={`reveal anim-delay-${i + 2} group flex gap-6 py-7 border-b border-white/10 first:border-t hover:border-verde-500/30 transition-colors cursor-default`}>
             <span class="font-mono text-sm text-verde-500 mt-1 shrink-0">{feat.num}</span>
             <div>
               <h3 class="font-display text-lg font-bold uppercase tracking-wide text-white group-hover:text-acento transition-colors duration-300">

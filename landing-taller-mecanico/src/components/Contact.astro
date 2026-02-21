@@ -33,17 +33,17 @@ const contactInfo = [
         <span class="reveal inline-block font-mono text-xs uppercase tracking-[0.3em] text-verde-600 mb-4">
           // Contacto
         </span>
-        <h2 class="reveal delay-1 font-display text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-verde-950 leading-[0.95]">
+        <h2 class="reveal anim-delay-1 font-display text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-verde-950 leading-[0.95]">
           Agenda tu<br/><span class="text-verde-600">cita hoy</span>
         </h2>
-        <p class="reveal delay-2 mt-6 text-lg text-acero/70 leading-relaxed max-w-md">
+        <p class="reveal anim-delay-2 mt-6 text-lg text-acero/70 leading-relaxed max-w-md">
           Contáctanos y recibe un diagnóstico gratuito. Estamos listos para ayudarte con cualquier problema de tu vehículo.
         </p>
 
         <!-- Contact info -->
         <div class="mt-10 space-y-6">
           {contactInfo.map((info, i) => (
-            <div class={`reveal delay-${i + 3} flex items-start gap-4 group`}>
+            <div class={`reveal anim-delay-${i + 3} flex items-start gap-4 group`}>
               <div class="w-10 h-10 bg-verde-100 rounded-sm flex items-center justify-center text-verde-600 shrink-0 group-hover:bg-verde-600 group-hover:text-white transition-all duration-300">
                 <Fragment set:html={info.icon} />
               </div>
@@ -56,7 +56,7 @@ const contactInfo = [
         </div>
 
         <!-- WhatsApp CTA -->
-        <div class="reveal delay-7 mt-10">
+        <div class="reveal anim-delay-7 mt-10">
           <a
             href="#"
             class="inline-flex items-center gap-3 px-6 py-3 bg-verde-600 text-white font-display font-bold uppercase tracking-wider text-sm hover:bg-verde-700 transition-colors duration-300 rounded-sm"
@@ -70,7 +70,7 @@ const contactInfo = [
       </div>
 
       <!-- Right column - Form -->
-      <div class="reveal delay-2">
+      <div class="reveal anim-delay-2">
         <form class="bg-white border border-verde-100 rounded-sm p-8 lg:p-10 shadow-xl shadow-verde-900/5">
           <h3 class="font-display text-xl font-bold uppercase tracking-wide text-verde-950 mb-8">
             Solicita tu Cita

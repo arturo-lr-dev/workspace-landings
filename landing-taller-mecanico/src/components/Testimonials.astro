@@ -39,7 +39,7 @@ const testimonials = [
       <span class="reveal inline-block font-mono text-xs uppercase tracking-[0.3em] text-verde-400 mb-4">
         // Testimonios
       </span>
-      <h2 class="reveal delay-1 font-display text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-white leading-[0.95]">
+      <h2 class="reveal anim-delay-1 font-display text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-white leading-[0.95]">
         Lo que dicen<br/><span class="text-gradient-green">nuestros clientes</span>
       </h2>
     </div>
@@ -47,7 +47,7 @@ const testimonials = [
     <!-- Testimonials grid -->
     <div class="grid md:grid-cols-2 gap-6">
       {testimonials.map((t, i) => (
-        <div class={`reveal delay-${i + 1} group relative bg-verde-900/40 border border-verde-700/20 rounded-sm p-8 hover:border-verde-500/30 transition-all duration-500`}>
+        <div class={`reveal anim-delay-${i + 1} group relative bg-verde-900/40 border border-verde-700/20 rounded-sm p-8 hover:border-verde-500/30 transition-all duration-500`}>
           <!-- Stars -->
           <div class="flex gap-1 mb-5">
             {Array.from({length: t.rating}).map(() => (
@@ -82,7 +82,7 @@ const testimonials = [
     </div>
 
     <!-- Trust bar -->
-    <div class="reveal delay-5 mt-16 flex flex-wrap items-center justify-center gap-8 lg:gap-16 py-8 border-t border-b border-white/5">
+    <div class="reveal anim-delay-5 mt-16 flex flex-wrap items-center justify-center gap-8 lg:gap-16 py-8 border-t border-b border-white/5">
       <div class="text-center">
         <span class="block text-3xl font-display font-bold text-acento">4.9</span>
         <span class="block text-[10px] font-mono uppercase tracking-widest text-white/30 mt-1">Google Rating</span>

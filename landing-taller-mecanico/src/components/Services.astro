@@ -49,12 +49,12 @@ const services = [
       <span class="reveal inline-block font-mono text-xs uppercase tracking-[0.3em] text-verde-600 mb-4">
         // Nuestros servicios
       </span>
-      <h2 class="reveal delay-1 font-display text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-verde-950 leading-[0.95]">
+      <h2 class="reveal anim-delay-1 font-display text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-verde-950 leading-[0.95]">
         Soluciones<br/>
         <span class="text-verde-600">completas</span> para<br/>
         tu vehículo
       </h2>
-      <p class="reveal delay-2 mt-6 text-lg text-acero/70 leading-relaxed">
+      <p class="reveal anim-delay-2 mt-6 text-lg text-acero/70 leading-relaxed">
         Contamos con equipos de última tecnología y técnicos certificados para ofrecer un servicio integral de calidad.
       </p>
     </div>
@@ -62,7 +62,7 @@ const services = [
     <!-- Services grid -->
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
       {services.map((service, i) => (
-        <article class={`reveal delay-${i + 1} group relative bg-white border border-verde-100 rounded-sm p-7 lg:p-8 hover:border-verde-400 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-verde-600/5`}>
+        <article class={`reveal anim-delay-${i + 1} group relative bg-white border border-verde-100 rounded-sm p-7 lg:p-8 hover:border-verde-400 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-verde-600/5`}>
           {service.tag && (
             <span class="absolute top-4 right-4 px-2 py-0.5 bg-acento text-verde-950 text-[10px] font-mono font-bold uppercase tracking-wider">
               {service.tag}
