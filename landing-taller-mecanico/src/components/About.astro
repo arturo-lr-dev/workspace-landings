@@ -1,0 +1,110 @@
+---
+const features = [
+  { num: "01", title: "Técnicos Certificados", desc: "Personal con certificación ASE y capacitación continua en las últimas tecnologías automotrices." },
+  { num: "02", title: "Equipo de Punta", desc: "Herramientas y escáneres de última generación para diagnósticos precisos y reparaciones eficientes." },
+  { num: "03", title: "Garantía Total", desc: "Respaldamos cada reparación con garantía escrita. Tu tranquilidad es nuestra prioridad." },
+  { num: "04", title: "Precios Justos", desc: "Presupuesto detallado y transparente antes de cualquier trabajo. Sin costos ocultos." },
+];
+---
+
+<section id="nosotros" class="section about">
+  <div class="about-bg">
+    <div class="about-glow about-glow--1"></div>
+    <div class="about-glow about-glow--2"></div>
+    <div class="about-grid-pattern"></div>
+  </div>
+
+  <div class="container about-inner">
+    <div class="about-layout">
+      <div class="about-left">
+        <span class="reveal section-label" style="color:var(--verde-400)">// Sobre nosotros</span>
+        <h2 class="reveal anim-delay-1 section-title about-title">
+          Más que un<br/><span class="text-gradient-green">taller</span>,<br/>tu aliado
+        </h2>
+        <p class="reveal anim-delay-2 about-desc">
+          Con más de dos décadas de experiencia, combinamos la pasión por la mecánica automotriz con la tecnología más avanzada del mercado.
+        </p>
+        <div class="reveal anim-delay-3 about-big-num">
+          <span class="about-num">20</span>
+          <div class="about-num-text">
+            <span style="color:white">Años de</span>
+            <span style="color:var(--verde-400)">Excelencia</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-features">
+        {features.map((feat, i) => (
+          <div class={`reveal anim-delay-${i + 2} about-feat`}>
+            <span class="about-feat-num">{feat.num}</span>
+            <div>
+              <h3 class="about-feat-title">{feat.title}</h3>
+              <p class="about-feat-desc">{feat.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about { background: var(--verde-950); }
+  .about-bg { position: absolute; inset: 0; }
+  .about-glow { position: absolute; border-radius: 50%; }
+  .about-glow--1 { top: 0; right: 0; width: 500px; height: 500px; background: rgba(45,138,45,0.1); filter: blur(120px); }
+  .about-glow--2 { bottom: 0; left: 25%; width: 400px; height: 400px; background: rgba(200,255,0,0.05); filter: blur(100px); }
+  .about-grid-pattern {
+    position: absolute; inset: 0; opacity: 0.03;
+    background-image: linear-gradient(rgba(200,255,0,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(200,255,0,0.4) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .about-inner { position: relative; z-index: 10; }
+  .about-layout { display: grid; gap: 4rem; }
+  @media (min-width: 1024px) { .about-layout { grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; } }
+
+  .about-title { font-size: clamp(2.25rem, 5vw, 3.75rem); color: white; }
+  .about-desc { margin-top: 2rem; font-size: 1.125rem; color: rgba(255,255,255,0.5); line-height: 1.625; max-width: 28rem; }
+
+  .about-big-num { display: flex; align-items: flex-end; gap: 1rem; margin-top: 3rem; }
+  .about-num {
+    font-family: var(--font-display);
+    font-size: clamp(5rem, 10vw, 8rem);
+    font-weight: 700;
+    color: var(--acento);
+    line-height: 1;
+  }
+  .about-num-text {
+    margin-bottom: 0.75rem;
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .about-num-text span { display: block; }
+
+  /* Features */
+  .about-feat {
+    display: flex;
+    gap: 1.5rem;
+    padding-block: 1.75rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    cursor: default;
+    transition: border-color 0.3s;
+  }
+  .about-feat:first-child { border-top: 1px solid rgba(255,255,255,0.1); }
+  .about-feat:hover { border-color: rgba(56,163,56,0.3); }
+  .about-feat-num { font-family: var(--font-mono); font-size: 0.875rem; color: var(--verde-500); margin-top: 0.25rem; flex-shrink: 0; }
+  .about-feat-title {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    color: white;
+    transition: color 0.3s;
+  }
+  .about-feat:hover .about-feat-title { color: var(--acento); }
+  .about-feat-desc { margin-top: 0.5rem; font-size: 0.875rem; color: rgba(255,255,255,0.4); line-height: 1.625; transition: color 0.3s; }
+  .about-feat:hover .about-feat-desc { color: rgba(255,255,255,0.6); }
+</style>
